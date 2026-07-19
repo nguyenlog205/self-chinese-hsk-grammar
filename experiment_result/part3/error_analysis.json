@@ -1,0 +1,258 @@
+{
+  "page-176": {
+    "ref_len": 365,
+    "n_match": 362,
+    "n_substitutions": 3,
+    "n_deletions": 0,
+    "n_insertions": 1,
+    "n_tone_mark_losses": 0,
+    "share_substitutions": 0.75,
+    "share_deletions": 0.0,
+    "share_insertions": 0.25,
+    "share_tone_mark_of_substitutions": 0.0,
+    "top_substitutions": [
+      {
+        "ref": "？",
+        "hyp": "?",
+        "count": 3
+      }
+    ],
+    "top_deletions": [],
+    "top_insertions": [
+      {
+        "char": "一",
+        "count": 1
+      }
+    ]
+  },
+  "page-190": {
+    "ref_len": 331,
+    "n_match": 328,
+    "n_substitutions": 3,
+    "n_deletions": 0,
+    "n_insertions": 0,
+    "n_tone_mark_losses": 0,
+    "share_substitutions": 1.0,
+    "share_deletions": 0.0,
+    "share_insertions": 0.0,
+    "share_tone_mark_of_substitutions": 0.0,
+    "top_substitutions": [
+      {
+        "ref": "？",
+        "hyp": "?",
+        "count": 1
+      },
+      {
+        "ref": "\"",
+        "hyp": "“",
+        "count": 1
+      },
+      {
+        "ref": "\"",
+        "hyp": "”",
+        "count": 1
+      }
+    ],
+    "top_deletions": [],
+    "top_insertions": []
+  },
+  "page-205": {
+    "ref_len": 476,
+    "n_match": 453,
+    "n_substitutions": 21,
+    "n_deletions": 2,
+    "n_insertions": 0,
+    "n_tone_mark_losses": 0,
+    "share_substitutions": 0.9130434782608695,
+    "share_deletions": 0.08695652173913043,
+    "share_insertions": 0.0,
+    "share_tone_mark_of_substitutions": 0.0,
+    "top_substitutions": [
+      {
+        "ref": "／",
+        "hyp": "/",
+        "count": 15
+      },
+      {
+        "ref": "＋",
+        "hyp": "+",
+        "count": 6
+      }
+    ],
+    "top_deletions": [
+      {
+        "char": "。",
+        "count": 2
+      }
+    ],
+    "top_insertions": []
+  },
+  "page-220": {
+    "ref_len": 480,
+    "n_match": 464,
+    "n_substitutions": 16,
+    "n_deletions": 0,
+    "n_insertions": 14,
+    "n_tone_mark_losses": 0,
+    "share_substitutions": 0.5333333333333333,
+    "share_deletions": 0.0,
+    "share_insertions": 0.4666666666666667,
+    "share_tone_mark_of_substitutions": 0.0,
+    "top_substitutions": [
+      {
+        "ref": "＋",
+        "hyp": "+",
+        "count": 5
+      },
+      {
+        "ref": "…",
+        "hyp": "·",
+        "count": 4
+      },
+      {
+        "ref": "\"",
+        "hyp": "“",
+        "count": 2
+      },
+      {
+        "ref": "／",
+        "hyp": "/",
+        "count": 2
+      },
+      {
+        "ref": "\"",
+        "hyp": "”",
+        "count": 2
+      },
+      {
+        "ref": "…",
+        "hyp": ".",
+        "count": 1
+      }
+    ],
+    "top_deletions": [],
+    "top_insertions": [
+      {
+        "char": "·",
+        "count": 7
+      },
+      {
+        "char": ".",
+        "count": 6
+      },
+      {
+        "char": "黃",
+        "count": 1
+      }
+    ]
+  },
+  "page-235": {
+    "ref_len": 438,
+    "n_match": 436,
+    "n_substitutions": 2,
+    "n_deletions": 0,
+    "n_insertions": 0,
+    "n_tone_mark_losses": 0,
+    "share_substitutions": 1.0,
+    "share_deletions": 0.0,
+    "share_insertions": 0.0,
+    "share_tone_mark_of_substitutions": 0.0,
+    "top_substitutions": [
+      {
+        "ref": "¹",
+        "hyp": "1",
+        "count": 2
+      }
+    ],
+    "top_deletions": [],
+    "top_insertions": []
+  },
+  "page-250": {
+    "ref_len": 599,
+    "n_match": 597,
+    "n_substitutions": 1,
+    "n_deletions": 1,
+    "n_insertions": 0,
+    "n_tone_mark_losses": 0,
+    "share_substitutions": 0.5,
+    "share_deletions": 0.5,
+    "share_insertions": 0.0,
+    "share_tone_mark_of_substitutions": 0.0,
+    "top_substitutions": [
+      {
+        "ref": "睛",
+        "hyp": "晴",
+        "count": 1
+      }
+    ],
+    "top_deletions": [
+      {
+        "char": "。",
+        "count": 1
+      }
+    ],
+    "top_insertions": []
+  },
+  "page-260": {
+    "ref_len": 257,
+    "n_match": 218,
+    "n_substitutions": 1,
+    "n_deletions": 38,
+    "n_insertions": 0,
+    "n_tone_mark_losses": 0,
+    "share_substitutions": 0.02564102564102564,
+    "share_deletions": 0.9743589743589743,
+    "share_insertions": 0.0,
+    "share_tone_mark_of_substitutions": 0.0,
+    "top_substitutions": [
+      {
+        "ref": "—",
+        "hyp": "-",
+        "count": 1
+      }
+    ],
+    "top_deletions": [
+      {
+        "char": "，",
+        "count": 2
+      },
+      {
+        "char": "—",
+        "count": 2
+      },
+      {
+        "char": "发",
+        "count": 1
+      },
+      {
+        "char": "现",
+        "count": 1
+      },
+      {
+        "char": "原",
+        "count": 1
+      },
+      {
+        "char": "来",
+        "count": 1
+      },
+      {
+        "char": "差",
+        "count": 1
+      },
+      {
+        "char": "别",
+        "count": 1
+      },
+      {
+        "char": "竟",
+        "count": 1
+      },
+      {
+        "char": "出",
+        "count": 1
+      }
+    ],
+    "top_insertions": []
+  }
+}

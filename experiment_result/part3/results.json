@@ -1,0 +1,154 @@
+{
+  "per_page": [
+    {
+      "page": "page-176",
+      "pure_tool_cer": 0.010958904109589041,
+      "pure_tool_bag_cer": 0.008219178082191747,
+      "pure_tool_structure_fidelity": {
+        "n_headings": 6,
+        "n_bracket_points": 4,
+        "heading_recall": 1.0,
+        "bracket_recall": 1.0
+      },
+      "with_box_cer": 0.010958904109589041,
+      "with_box_bag_cer": 0.008219178082191747,
+      "with_box_structure_fidelity": {
+        "n_headings": 6,
+        "n_bracket_points": 4,
+        "heading_recall": 1.0,
+        "bracket_recall": 1.0
+      }
+    },
+    {
+      "page": "page-190",
+      "pure_tool_cer": 0.00906344410876133,
+      "pure_tool_bag_cer": 0.009063444108761365,
+      "pure_tool_structure_fidelity": {
+        "n_headings": 4,
+        "n_bracket_points": 6,
+        "heading_recall": 1.0,
+        "bracket_recall": 1.0
+      },
+      "with_box_cer": 0.00906344410876133,
+      "with_box_bag_cer": 0.009063444108761365,
+      "with_box_structure_fidelity": {
+        "n_headings": 4,
+        "n_bracket_points": 6,
+        "heading_recall": 1.0,
+        "bracket_recall": 1.0
+      }
+    },
+    {
+      "page": "page-205",
+      "pure_tool_cer": 0.04831932773109244,
+      "pure_tool_bag_cer": 0.04831932773109249,
+      "pure_tool_structure_fidelity": {
+        "n_headings": 2,
+        "n_bracket_points": 4,
+        "heading_recall": 1.0,
+        "bracket_recall": 1.0
+      },
+      "with_box_cer": 0.04831932773109244,
+      "with_box_bag_cer": 0.04831932773109249,
+      "with_box_structure_fidelity": {
+        "n_headings": 2,
+        "n_bracket_points": 4,
+        "heading_recall": 1.0,
+        "bracket_recall": 1.0
+      }
+    },
+    {
+      "page": "page-220",
+      "pure_tool_cer": 0.0625,
+      "pure_tool_bag_cer": 0.033333333333333326,
+      "pure_tool_structure_fidelity": {
+        "n_headings": 3,
+        "n_bracket_points": 7,
+        "heading_recall": 1.0,
+        "bracket_recall": 1.0
+      },
+      "with_box_cer": 0.0625,
+      "with_box_bag_cer": 0.033333333333333326,
+      "with_box_structure_fidelity": {
+        "n_headings": 3,
+        "n_bracket_points": 7,
+        "heading_recall": 1.0,
+        "bracket_recall": 1.0
+      }
+    },
+    {
+      "page": "page-235",
+      "pure_tool_cer": 0.0045662100456621,
+      "pure_tool_bag_cer": 0.004566210045662156,
+      "pure_tool_structure_fidelity": {
+        "n_headings": 6,
+        "n_bracket_points": 6,
+        "heading_recall": 1.0,
+        "bracket_recall": 1.0
+      },
+      "with_box_cer": 0.0045662100456621,
+      "with_box_bag_cer": 0.004566210045662156,
+      "with_box_structure_fidelity": {
+        "n_headings": 6,
+        "n_bracket_points": 6,
+        "heading_recall": 1.0,
+        "bracket_recall": 1.0
+      }
+    },
+    {
+      "page": "page-250",
+      "pure_tool_cer": 0.00333889816360601,
+      "pure_tool_bag_cer": 0.0033388981636059967,
+      "pure_tool_structure_fidelity": {
+        "n_headings": 1,
+        "n_bracket_points": 10,
+        "heading_recall": 1.0,
+        "bracket_recall": 1.0
+      },
+      "with_box_cer": 0.00333889816360601,
+      "with_box_bag_cer": 0.0033388981636059967,
+      "with_box_structure_fidelity": {
+        "n_headings": 1,
+        "n_bracket_points": 10,
+        "heading_recall": 1.0,
+        "bracket_recall": 1.0
+      }
+    },
+    {
+      "page": "page-260",
+      "pure_tool_cer": 0.1517509727626459,
+      "pure_tool_bag_cer": 0.15175097276264593,
+      "pure_tool_structure_fidelity": {
+        "n_headings": 0,
+        "n_bracket_points": 0,
+        "heading_recall": 1.0,
+        "bracket_recall": 1.0
+      },
+      "with_box_cer": 0.1517509727626459,
+      "with_box_bag_cer": 0.15175097276264593,
+      "with_box_structure_fidelity": {
+        "n_headings": 0,
+        "n_bracket_points": 0,
+        "heading_recall": 1.0,
+        "bracket_recall": 1.0
+      }
+    }
+  ],
+  "mean_pure_tool_cer": 0.04149967956019383,
+  "median_pure_tool_cer": 0.010958904109589041,
+  "mean_with_box_cer": 0.04149967956019383,
+  "median_with_box_cer": 0.010958904109589041,
+  "mean_pure_tool_bag_cer": 0.03694162346104186,
+  "mean_with_box_bag_cer": 0.03694162346104186,
+  "mean_pure_tool_heading_recall": 1.0,
+  "mean_pure_tool_bracket_recall": 1.0,
+  "mean_with_box_heading_recall": 1.0,
+  "mean_with_box_bracket_recall": 1.0,
+  "wilcoxon_with_box_vs_pure_tool_cer": {
+    "n": 7,
+    "n_nonzero_diff": 0,
+    "statistic": NaN,
+    "p_value": NaN,
+    "significant_at_0.05": false
+  }
+}

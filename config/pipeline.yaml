@@ -1,0 +1,25 @@
+name: "Appendix A: grammar-point outline (语法等级大纲)"
+source_pdf: data/origins/语言文字规范_附录A_p176-260.pdf
+page_range: [176, 260]
+
+benchmark:
+  images_dir: data/benchmark/images
+  groundtruth_dir: data/benchmark/groundtruth
+  pages: [176, 190, 205, 220, 235, 250, 260]
+
+variants: [pure_tool, with_box]
+
+box_params:
+  block_alpha: 0.75
+  row_gap_px: 30
+  min_boxes_for_reorder: 100
+
+metrics: [cer, bag_cer, structure_fidelity, significance]
+# structure_fidelity matters more than raw CER here: this document is
+# bracket-numbered grammar points (e.g. 【一04】) under A.x.x.x headings, and
+# whether those specific markers survive OCR is the real question for this
+# document's downstream use (building grammar study notes), not column
+# ordering.
+
+output:
+  results_dir: experiment_result
