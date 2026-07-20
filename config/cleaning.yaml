@@ -1,0 +1,19 @@
+name: "Appendix A cleanup: headings, boilerplate, grammar-point bullets"
+
+input: outcome/语言文字规范_附录A_语法等级大纲.md
+output: outcome/processed.md
+
+heading:
+  # code like A.1 / A.1.1 / A.1.1.1 / A.1.1.7.1 -> header level = (segments after "A.") + level_offset
+  code_pattern: '^A\.(\d+(?:\.\d+)*)(.*)$'
+  level_offset: 1
+
+grammar_point:
+  # **【一01】...** -> 【一01】...  (drop the bold wrapper, keep the text)
+  bold_pattern: '^\*\*(【.*)\*\*$'
+
+boilerplate:
+  # exact-match lines to drop entirely
+  drop_lines: ["---"]
+  # lines to wrap as HTML comments instead of dropping
+  comment_patterns: ['^GF\s*0025—2021$']
