@@ -1,4 +1,4 @@
-# Post-processing — cleaning the OCR output
+# Post-processing: cleaning the OCR output
 
 `outcome/语言文字规范_附录A_语法等级大纲.md` is the raw RapidOCR output (see
 `docs/benchmark_result.md` for why no OCR-side post-processing was needed).
@@ -43,10 +43,10 @@ Defined in `config/cleaning.yaml`, implemented in `src/cleaning_files.py`.
 | 4 | Strip the bold wrapper off grammar-point bullets | `**【一01】...**` | `【一01】...` |
 | 5 | Drop bare `---` separators | `---` | *(removed)* |
 | 6 | Comment out the repeated standard-number footer | `GF 0025—2021` | `<!-- GF 0025—2021 -->` |
-| 7 | Collapse consecutive blank lines left behind by the above | — | — |
+| 7 | Collapse consecutive blank lines left behind by the above | n/a | n/a |
 
 Rule 1 applies uniformly whether the header already had a (possibly wrong)
-`#` prefix or was still plain text — the existing `#` count is never
+`#` prefix or was still plain text; the existing `#` count is never
 trusted, only the numeric code is.
 
 ## Running it
@@ -61,17 +61,17 @@ python3 src/cleaning_files.py --config config/cleaning.yaml
 Counts checked against the raw file after running:
 
 - Headers: 283 total (7 `##` + 59 `###` + 113 `####` + 104 `#####`), up
-  from 6 — matches 6 fixed + 277 newly recognized, no plain `A.x.x.x` lines
-  left unconverted.
-- Grammar-point bullets: 572 before and after (none lost, none gained) —
-  preserves the 100% recall result from the benchmark.
+  from 6, matching 6 fixed + 277 newly recognized, with no plain `A.x.x.x`
+  lines left unconverted.
+- Grammar-point bullets: 572 before and after (none lost, none gained),
+  preserving the 100% recall result from the benchmark.
 - Page markers: 85 `<!-- page N -->` comments, unchanged.
 - No `**` and no bare `---` remain anywhere in the output.
 
 ## Known gaps (not handled by this pass)
 
 - Body text still has soft-wrapped lines (one visual line per paragraph
-  line from the source, not one Markdown paragraph) — untouched, since it
+  line from the source, not one Markdown paragraph), left untouched since it
   doesn't affect headings or grammar-point extraction, the two things this
   document is used for downstream.
 - Cross-references inside body text (e.g. `见【二58】"比较句2-（4）"`) are left

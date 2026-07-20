@@ -1,4 +1,4 @@
-# 语言文字规范 — Grammar Appendix Extraction
+# 语言文字规范: Grammar Appendix Extraction
 
 Extracting the grammar-point appendix (Appendix A, **语法等级大纲**, pages
 176-260) from a scanned Chinese-language standard (*Chinese Proficiency
@@ -8,12 +8,12 @@ Grading Standards for International Chinese Language Education*, GF
 The source PDF has no text layer (`pdftotext` recovers only a repeated
 watermark), so the appendix has to go through OCR. Rather than assuming an
 approach would work, it was benchmarked against a 7-page hand-transcribed
-sample first — see `docs/benchmark_result.md`.
+sample first; see `docs/benchmark_result.md`.
 
 ## Result
 
-Plain RapidOCR, no post-processing needed: **mean CER 0.041**, and — the
-metric that actually matters here — **100% recall on both section headings
+Plain RapidOCR, no post-processing needed: **mean CER 0.041**, and (the
+metric that actually matters here) **100% recall on both section headings
 (`A.x.x.x`) and bracket-numbered grammar points (`【一04】`)** across the
 benchmark sample. Full reasoning and the one known limitation (an
 occasional dropped line, not auto-fixable without ground truth) in

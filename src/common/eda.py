@@ -19,6 +19,22 @@ CROSSREF_RE = re.compile(r"见【([^0-9】]+?)(\d+)】")
 PAGE_RE = re.compile(r"^<!--\s*page\s+(\d+)\s*-->$")
 
 
+ITEM_SPLIT_RE = re.compile(r"[、；]")
+
+
+def split_label_items(label: str) -> list[str]:
+    """Split a grammar-point label into its enumerated items.
+
+    Most labels are '<category>：<item>、<item>、...' (e.g. '方位名词：上、
+    下、里...'); a 、 or ； inside them separates alternative words/forms
+    covered by the same single grammar point, not separate grammar points.
+    Labels without a category prefix (e.g. '跟1、和1') are split the same
+    way; a label with no 、/； at all is one item."""
+    body = label.split("：", 1)[-1]
+    items = [x.strip() for x in ITEM_SPLIT_RE.split(body) if x.strip()]
+    return items or [label.strip()]
+
+
 def canonical_prefix(raw: str) -> str:
     """Normalize a bracket-label prefix to one of 一/二/三/四/五/六/七至九,
     collapsing OCR dash variants ('七一九', '七—九') and stray trailing
@@ -80,9 +96,23 @@ def parse_document(text: str) -> tuple[list[GrammarPoint], list[dict]]:
             prefix_raw, number, label = m_b.group(1), int(m_b.group(2)), m_b.group(3)
             level_code, level_title = stack.get(2, ("", ""))
             category_path = " > ".join(stack[l][1] for l in sorted(stack) if l >= 3)
+
+            # A label ending in an enumeration comma/semicolon (、／；) means
+            # OCR wrapped the word list onto the next line rather than the
+            # word list actually ending — pull those continuation lines back
+            # into the label instead of counting them as example lines.
+            j = i + 1
+            while label.rstrip().endswith(("、", "；")) and j < n:
+                k = j
+                while k < n and lines[k].strip() == "":
+                    k += 1
+                if k >= n or HEADER_RE.match(lines[k]) or BULLET_RE.match(lines[k].strip()) or PAGE_RE.match(lines[k].strip()):
+                    break
+                label = label.rstrip() + lines[k].strip()
+                j = k + 1
+
             cross_refs = [f"{cp}{cn}" for cp, cn in CROSSREF_RE.findall(label)]
 
-            j = i + 1
             n_example_lines = 0
             example_chars = 0
             while j < n:
